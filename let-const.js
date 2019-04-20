@@ -156,3 +156,22 @@ function getUniqueNumber(arr) {
     
 }
 console.log(getUniqueNumber(array));
+
+// Catch and Throw Errors in JavaScript
+// This is the interesting part of JS, because if we not getting errors then we are not progressing, so that's why we using try and catch errors, in other words we would like to show how to throw errors in JS.
+const getTip = (amount) => {
+    if (typeof amount === 'number'){
+        return amount *.25
+    } else {
+        throw Error('Argument must be a number');
+    }
+    
+}
+
+try {
+    const result = getTip(10);
+    console.log(result);
+} catch (e) {
+    console.log('try catch block is running');
+}
+

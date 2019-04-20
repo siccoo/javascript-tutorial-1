@@ -22,3 +22,26 @@ console.log(revStr('doG'))
 // }
 // console.log(reverse())
 
+// class Logger {
+//     constructor(x) {
+//         x++;
+//         console.log(x);
+//         new.target(x);
+//     }
+// }
+
+// const l = new Logger(1);
+
+class FirstLogger {
+    constructor() {
+        console.log(1);
+    }
+}
+
+class SecondLogger extends FirstLogger {
+    constructor() {
+        console.log(2);
+    }
+}
+
+const l = new SecondLogger();
